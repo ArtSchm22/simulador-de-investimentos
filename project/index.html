@@ -26,8 +26,8 @@
                 <label for="basic-url">Juros ao mês</label>
                 <input type="number" id="taxa_de_juros">
             </div>
-            <div>
-                <button class="btn-1" type="click" value="calcular" onclick="return calcular_juros_compostos()"></button>
+            <div class="label-button">
+                <button class="btn-1" type="button" value="calcular" onclick="calcular_juros_compostos()">CALCULAR</button>
             </div>
         </form>
 
@@ -58,7 +58,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" defer>
+<script type="text/javascript" defer>
         function calcular_juros_compostos(){
         let investimento_inicial = parseFloat(document.getElementById("investimento_inicial").value)
         let investimento_mensal = parseFloat(document.getElementById("investimento_mensal").value)
@@ -81,8 +81,7 @@
         let valor_a_receber = total_investimento_acumulado + juros_compostos_total
         
         
-        let inicial = document.getElementById("inicial")
-        inicial.innerHTML = investimento_inicial
+        document.getElementById("inicial").innerHTML =  investimento_inicial
         document.getElementById("mensal").innerHTML = investimento_mensal
         document.getElementById("duracao").innerHTML = meses
         document.getElementById("tt_investimento").innerHTML = Number(total_investimento_acumulado).toFixed(2)
@@ -92,6 +91,6 @@
         document.getElementById('formCalc').reset()
         return false
         }
-        </script>
+</script>
 </body>
 </html>
