@@ -17,6 +17,7 @@
             </div>
         </div>
         <div onclick="abrirModal()" class="btn-modal">Como funciona?</div>
+
         <form for="basic-url" id="form_calc" method="post">
             <div class="label-1">
                     <label for="basic-url">Investimento inicial</label>
@@ -36,33 +37,34 @@
             </div>
             <div class="label-button">
                 <button class="btn-1" type="button" value="calcular" onclick="calcular_juros_compostos()">CALCULAR</button>
+                <button class="btn-2" type="button" value="limpar" onclick="clean()">LIMPAR</button>
             </div>
         </form>
 
         <div class="container-2">
             <div class="card">
-                <h4>Investimento inicial</h4>
-                <p id="inicial">R$</p>
+                <h4>Inves. inicial</h4>
+                <p id="inicial"></p>
             </div>
             <div class="card-1">
-                <h4>Investimento mensal</h4>
-                <p id="mensal">R$</p>
+                <h4>Inves. mensal</h4>
+                <p id="mensal"></p>
             </div>
             <div class="card-2">
-                <h4>Tempo do investimento</h4>
-                <p id="duracao">Meses</p>
+                <h4>Tempo do inves.</h4>
+                <p id="duracao"></p>
             </div>
             <div class="card-3">
                 <h4>Total investido</h4>
-                <p id="tt_investimento">R$</p>
+                <p id="tt_investimento"></p>
             </div>
             <div class="card-4">
                 <h4>Lucro</h4>
-                <p id="juros_recebidos">R$</p>
+                <p id="juros_recebidos"></p>
             </div>
             <div class="card-5">
                 <h4>Total</h4>
-                <p id="a_receber">R$</p>
+                <p id="a_receber"></p>
             </div>
         </div>
     </div>
