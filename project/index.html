@@ -51,7 +51,17 @@
         </div>
     </div>
     <script>
-        let investimento_inicial = document.getElementById()
+        let investimento_inicial = parseFloat(document.getElementById("investimento_inicial").value)
+        let investimento_mensal = parseFloat(document.getElementById("investimento_mensal").value)
+        let meses = parseInt(document.getElementById("meses").value)
+        let taxa_de_juros = parseFloat(document.getElementById("taxa_de_juros").value)
+
+        let total_investimento_acumulado = investimento_inicial + (investimento_mensal * meses)
+
+        let juros_compostos = 0
+        let juros_compostos_total = 0
+        
+    
     </script>
 </body>
 </html>
