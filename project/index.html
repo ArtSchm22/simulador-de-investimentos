@@ -34,35 +34,43 @@
         <div class="container-2">
             <div class="card-1">
                 <h4>Tempo do investimento</h4>
-                <p>R$</p><span id="duracao"></span>
+                <p id="duracao"></p>
             </div>
             <div class="card-2">
                 <h4>Total investido</h4>
-                <p>R$</p><span id="tt_investimento"></span>
+                <p id="tt_investimento"></p>
             </div>
             <div class="card-3">
                 <h4>Total</h4>
-                <p>R$</p><span id="juros_recebidos"></span>
+                <p id="juros_recebidos"></p>
             </div>
             <div class="card-4">
                 <h4>Lucro</h4>
-                <p>R$</p><span id="a_receber"></span>
+                <p id="a_receber"></p>
             </div>
         </div>
     </div>
-    <script>
+    <script type="text/javascript" defer>
         function calcular_juros_compostos(){
         let investimento_inicial = parseFloat(document.getElementById("investimento_inicial").value)
         let investimento_mensal = parseFloat(document.getElementById("investimento_mensal").value)
         let meses = parseInt(document.getElementById("meses").value)
         let taxa_de_juros = parseFloat(document.getElementById("taxa_de_juros").value)
         
+        let investimento_acumulado = investimento_inicial
+
+        let total_investimento_acumulado = investimento_inicial + (investimento_mensal * meses)   
         
-
-        let total_investimento_acumulado = investimento_inicial + (investimento_mensal * meses)
-
         let juros_compostos = 0
         let juros_compostos_total = 0
+
+        for (let i = 0; i < meses; i++) {
+            juros_compostos = (investimento_acumulado + taxa_de_juros) / 100;
+            juros_compostos_total += juros_compostos;
+            investimento_acumulado += juros_compostos + investimento_mensal;
+        }
+
+        let valor_a_receber = total_investimento_acumulado + juros_compostos_total
         
         
         document.getElementById("inicial").innerHTML = investimento_inicial
@@ -71,6 +79,9 @@
         document.getElementById("tt_investimento").innerHTML = Number(total_investimento_acumulado).toFixed(2)
         document.getElementById("juros_recebidos").innerHTML = Number(juros_compostos_total).toFixed(2)
         document.getElementById("a_receber").innerHTML = Number(valor_a_receber).toFixed(2)
+
+        document.getElementById('formCalc').reset()
+        return false
         }
         </script>
 </body>
