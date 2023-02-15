@@ -5,7 +5,7 @@
 }
 
 .btn-modal{
-    background-color: #4CAF50; 
+    background-color: #5f615f; 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -13,6 +13,8 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 .janela-modal{
@@ -54,4 +56,21 @@
 
 .janela-modal.abrir{
     display: flex;
+}
+
+form{
+    margin-top: 1%;
+}
+
+.label-1{
+    margin-top: 5px;
+}
+.label-2{
+
+}
+.label-3{
+
+}
+.label-4{
+
 }
