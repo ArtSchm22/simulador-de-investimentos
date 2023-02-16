@@ -22,14 +22,14 @@
         <form for="basic-url" id="form_calc" method="post">
             <div class="label-1">
                     <label for="basic-url">Investimento inicial</label>
-                <input type="number" id="investimento_inicial" required>
+                <input type="number" id="investimento_inicial">
             </div>
             <div class="label-2">
                 <label for="basic-url">Investimento mensal</label>
-                <input type="number" id="investimento_mensal" required>
+                <input type="number" id="investimento_mensal">
             </div>
             <div class="label-3">
-                <label for="basic-url">Quanto tempo? (meses)</label required>
+                <label for="basic-url">Quanto tempo? (meses)</label>
                 <input type="number" id="meses">
             </div>
             <div class="label-4">
@@ -97,9 +97,6 @@
         document.getElementById("tt_investimento").innerHTML = total_investimento_acumulado.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
         document.getElementById("juros_recebidos").innerHTML = juros_compostos_total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
         document.getElementById("a_receber").innerHTML = valor_a_receber.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
-
-        document.getElementById('formCalc').reset()
-        return false
         }
 
         function abrirModal(){
@@ -121,14 +118,6 @@
         document.getElementById("juros_recebidos").innerHTML = ""
         document.getElementById("a_receber").innerHTML = ""
         }
-
-        function inputObrigatorio(){
-            let inpt1 = document.getElementById("investimento_inicial")
-            let inpt2 = document.getElementById("investimento_mensal")
-            let inpt3 = document.getElementById("")
-            let inpt4 = document.getElementById("")
-        }
-
 </script>
 </body>
 </html>
