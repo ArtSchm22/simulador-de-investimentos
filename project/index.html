@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <title>Calculadora de Investimentos</title>
+    <title>Simulador de Investimentos</title>
 </head>
 <body>
+    <!-- NAO ESTÁ RESPONSIVO AINDA! -->
     <div class="container-1">
         <div class="janela-modal" id="janela-modal">
             <div class="modal">
                 <button class="fechar" id="fechar">X</button>
-                <h1>janela-modal</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque voluptas nam commodi at, corporis est praesentium adipisci a? Sequi consequuntur illum voluptates vero itaque delectus nostrum quas non obcaecati eveniet?</p>
+                <h1>Como funciona?</h1>
+                <p>Este simulador funciona com base na taxa de juros atual, onde você poderá calcular o quanto poderá ganhar a longo prazo investindo em uma renda fixa</p>
             </div>
         </div>
         <div onclick="abrirModal()" class="btn-modal">Como funciona?</div>
@@ -37,7 +38,6 @@
             </div>
             <div class="label-button">
                 <button class="btn-1" type="button" value="calcular" onclick="calcular_juros_compostos()">CALCULAR</button>
-                <button class="btn-2" type="button" value="limpar" onclick="clean()">LIMPAR</button>
             </div>
         </form>
 

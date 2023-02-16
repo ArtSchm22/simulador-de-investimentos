@@ -7,7 +7,7 @@
 }
 
 .btn-modal{
-    background-color: #acafac; 
+    background-color: #068b06; 
     border: none;
     color: white;
     width: 150px;
@@ -20,6 +20,9 @@
     font-size: 16px;
     border-radius: 15px;
     cursor: pointer;
+    margin-left: 45%;
+    margin-bottom: 3%;
+    margin-top: 1%;
 }
 
 .janela-modal{
@@ -28,11 +31,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #00000080;
+    background-color: #c7c7c780;
     display: none;
     align-items: center;
     justify-content: center;
     z-index: 999999;
+    text-align: center;
 }
 
 .modal{
@@ -85,6 +89,7 @@
 
 label{
     font-size: 20px;
+    margin-left: 35%;
 }
 
 input{
@@ -95,8 +100,9 @@ input{
     border-top: none;
     border-right: none;
     border-left: none;
-    border-color: #8a8a00;
+    border-color: #068b06;
     font-size: 18px;
+    margin-left: 35%;
 }
 
 .container-2{
@@ -148,7 +154,7 @@ input{
 }
 
 button{
-    background-color: #acafac; 
+    background-color: #068b06; 
     border: none;
     color: white;
     width: 150px;
@@ -163,7 +169,7 @@ button{
     width: 150px;
     height: 40px;
     text-align: center;
-    margin-right: 5%;
+    margin-left: 45%;
 }
 
 .btn-2{
@@ -182,3 +188,17 @@ p{
     text-align: center;
 }
 
+@keyframes transitionModal {
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.abrir .modal{
+    animation: transitionModal 0.5s;
+}
